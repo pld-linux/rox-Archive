@@ -9,7 +9,6 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/archive-%{version}.tgz
 # Source0-md5:	c8468811535076da8e7e1b5f9f0c89ed
 URL:		http://rox.sourceforge.net/archive.php3
-BuildRequires:	rpm-pythonprov
 Requires:	python-pygtk-gtk
 Requires:	rox-Lib
 %pyrequires_eq  python
