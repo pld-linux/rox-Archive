@@ -1,4 +1,3 @@
-%include  /usr/lib/rpm/macros.python
 %define _name Archive
 Summary:	ROX-archive is a program for creating and extracting archives
 Summary(pl):	ROX-archive s³u¿y do tworzenia i dekompresji archiwów
