@@ -3,7 +3,7 @@ Summary:	ROX-archive is a program for creating and extracting archives
 Summary(pl):	ROX-archive s³u¿y do tworzenia i dekompresji archiwów
 Name:		rox-%{_name}
 Version:	1.9.4
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/archive-%{version}.tgz
