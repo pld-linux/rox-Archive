@@ -8,6 +8,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/archive-%{version}.tgz
+# Source0-md5:	9f11380a89fd8624af27704020e23457
 URL:		http://rox.sourceforge.net/archive.php3
 BuildRequires:	rpm-pythonprov
 Requires:	python-pygtk
