@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/rox/archive-%{version}.tgz
 # Source0-md5:	3acb95461a0e95f3bdcd0aca9470925d
 URL:		http://rox.sourceforge.net/archive.php3
 Requires:	python-pygtk-gtk
+Requires:	rox >= 2.2.0-2
 Requires:	rox-Lib2
 %pyrequires_eq  python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -48,7 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Archive/Help/Changes
-%attr(755,root,root) %dir %{_appsdir}
 %attr(755,root,root) %{_appsdir}/%{_name}/AppRun
 %dir %{_appsdir}/%{_name}
 %{_appsdir}/%{_name}/.DirIcon
