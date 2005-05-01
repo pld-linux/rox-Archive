@@ -8,7 +8,7 @@ License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/archive-%{version}.tgz
 # Source0-md5:	3acb95461a0e95f3bdcd0aca9470925d
-URL:		http://rox.sourceforge.net/archive.php3
+URL:		http://rox.sourceforge.net/phpwiki/index.php/Archive
 Requires:	python-pygtk-gtk
 Requires:	rox >= 2.2.0-2
 Requires:	rox-Lib2
