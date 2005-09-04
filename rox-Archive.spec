@@ -2,20 +2,20 @@
 Summary:	ROX-archive is a program for creating and extracting archives
 Summary(pl):	ROX-archive s³u¿y do tworzenia i dekompresji archiwów
 Name:		rox-%{_name}
-Version:	1.9.5
+Version:	2.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/archive-%{version}.tgz
-# Source0-md5:	3acb95461a0e95f3bdcd0aca9470925d
+# Source0-md5:	ee7e91a0a3c4fe2ef811260373bfd0ae
 URL:		http://rox.sourceforge.net/phpwiki/index.php/Archive
 Requires:	python-pygtk-gtk
-Requires:	rox >= 2.2.0-2
+Requires:	rox >= 2.3
 Requires:	rox-Lib2
 %pyrequires_eq  python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_appsdir	%{_libdir}/ROX-apps
+%define		_roxdir	%{_libdir}/rox
 
 %description
 ROX-archive is a very easy to use program for creating and extracting
@@ -33,15 +33,15 @@ przechowywany, wys³any poczt±, itp.)
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_appsdir}/%{_name}/{Help,Messages}
+install -d $RPM_BUILD_ROOT%{_roxdir}/%{_name}/{Help,Messages}
 
 cd Archive
-install .DirIcon App* *.py $RPM_BUILD_ROOT%{_appsdir}/%{_name}
-install Help/README $RPM_BUILD_ROOT%{_appsdir}/%{_name}/Help
-install Messages/*.gmo $RPM_BUILD_ROOT%{_appsdir}/%{_name}/Messages
+install .DirIcon AppRun *.xml *.py $RPM_BUILD_ROOT%{_roxdir}/%{_name}
+install Help/README $RPM_BUILD_ROOT%{_roxdir}/%{_name}/Help
+install Messages/*.gmo $RPM_BUILD_ROOT%{_roxdir}/%{_name}/Messages
 
-%py_comp $RPM_BUILD_ROOT%{_appsdir}/%{_name}
-%py_ocomp $RPM_BUILD_ROOT%{_appsdir}/%{_name}
+%py_comp $RPM_BUILD_ROOT%{_roxdir}/%{_name}
+%py_ocomp $RPM_BUILD_ROOT%{_roxdir}/%{_name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,15 +49,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Archive/Help/Changes
-%attr(755,root,root) %{_appsdir}/%{_name}/AppRun
-%dir %{_appsdir}/%{_name}
-%{_appsdir}/%{_name}/.DirIcon
-%{_appsdir}/%{_name}/*.xml
-%{_appsdir}/%{_name}/*.py[co]
-%{_appsdir}/%{_name}/Help
-%dir %{_appsdir}/%{_name}/Messages
-%lang(de) %{_appsdir}/%{_name}/Messages/de.gmo
-%lang(es) %{_appsdir}/%{_name}/Messages/es.gmo
-%lang(it) %{_appsdir}/%{_name}/Messages/it.gmo
-%lang(zh_CN) %{_appsdir}/%{_name}/Messages/zh_CN.gmo
-%lang(zh_TW) %{_appsdir}/%{_name}/Messages/zh_TW.gmo
+%attr(755,root,root) %{_roxdir}/%{_name}/AppRun
+%dir %{_roxdir}/%{_name}
+%{_roxdir}/%{_name}/.DirIcon
+%{_roxdir}/%{_name}/*.xml
+%{_roxdir}/%{_name}/*.py[co]
+%{_roxdir}/%{_name}/Help
+%dir %{_roxdir}/%{_name}/Messages
+%lang(de) %{_roxdir}/%{_name}/Messages/de.gmo
+%lang(es) %{_roxdir}/%{_name}/Messages/es.gmo
+%lang(it) %{_roxdir}/%{_name}/Messages/it.gmo
+%lang(zh_CN) %{_roxdir}/%{_name}/Messages/zh_CN.gmo
+%lang(zh_TW) %{_roxdir}/%{_name}/Messages/zh_TW.gmo
