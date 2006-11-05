@@ -1,6 +1,6 @@
 %define _name Archive
-Summary:	ROX-archive is a program for creating and extracting archives
-Summary(pl):	ROX-archive s³u¿y do tworzenia i dekompresji archiwów
+Summary:	ROX-archive - a program for creating and extracting archives
+Summary(pl):	ROX-archive - program do tworzenia i dekompresji archiwów
 Name:		rox-%{_name}
 Version:	2.0
 Release:	1
@@ -9,6 +9,9 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/rox/archive-%{version}.tgz
 # Source0-md5:	ee7e91a0a3c4fe2ef811260373bfd0ae
 URL:		http://rox.sourceforge.net/phpwiki/index.php/Archive
+BuildRequires:	python
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 Requires:	python-pygtk-gtk
 Requires:	rox >= 2.3
 Requires:	rox-Lib2
