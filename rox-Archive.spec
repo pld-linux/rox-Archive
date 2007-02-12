@@ -1,6 +1,6 @@
 %define _name Archive
 Summary:	ROX-archive - a program for creating and extracting archives
-Summary(pl.UTF-8):   ROX-archive - program do tworzenia i dekompresji archiwów
+Summary(pl.UTF-8):	ROX-archive - program do tworzenia i dekompresji archiwów
 Name:		rox-%{_name}
 Version:	2.0
 Release:	1
